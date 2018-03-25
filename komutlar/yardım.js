@@ -10,7 +10,7 @@ exports.run = (client, message, params) => {
     const yardımlistesi=new Discord.RichEmbed()
     .setColor('RANDOM')
     .setAuthor("OA Premium Tüm Komutlar Yardım Listesi \n\n\n\n")
-    .addField("Eğlence Komutları","**yaz**:Bota istediğiniz herhangi şeyi yazdırır.!\n**özlü**:Bot size rastgele özlü sözler söyler.\n**ml**:Bot rastgele MLBB Resmi gönderir.\n**kalp**:OA ekibinden size kalp gönderir.")
+    .addField("Eğlence Komutları","**yaz**:Bota istediğiniz herhangi şeyi yazdırır.!\n **yazı-tura**:Yazı-tura atarsınız.!\n**özlü**:Bot size rastgele özlü sözler söyler.\n**ml**:Bot rastgele MLBB Resmi gönderir.\n**kalp**:OA ekibinden size kalp gönderir.")
   
   
 
