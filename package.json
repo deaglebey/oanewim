@@ -1,0 +1,22 @@
+{
+  "name": "turkuaz",
+  "version": "1.0.0",
+  "description": "Turkuaz",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot",
+    "turkce",
+    "bot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "discord.js": "^11.3.2",
+    "moment": "^2.20.1",
+    "util": "^0.10.3"
+  }
+}
