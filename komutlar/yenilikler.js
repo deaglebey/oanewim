@@ -10,7 +10,7 @@ exports.run = (client, message, params) => {
       
       .setAuthor("OA Premium | Son Yapılan Güncellemeler.!", "https://cdn.discordapp.com/avatars/384342647826808832/b453dbf1833b28342ce837a0024f458c.jpg?size=1024")
       .setColor("#15f153")
-	  .addField("Son Güncelleme",'*Yardım komutu düzenlendi.\n*Bildir komutunun bugları düzenlendi.!\n*Sunucu iyileştirmeleri ve bot düzenlemesi için Yönetim ekibi anket komutu eklendi.!\n* **oa+kalp** yazarak ekipten size kalp gönderilmesini sağlayabilirsiniz.!\n*ML Komutu Düzeltildi\n*Bildir komutu eklendi,bu komut ile sizlere rahatsızlık veren kullanıcıları Yönetim Ekibimize Rahatlıkla bildirebilirsiniz.!\n*Yeni gelen kullanıcılara özel mesajla karşılama ayarlandı.!')
+	  .addField("Son Güncelleme",'*Yazı-tura komutu eklendi.\n*Yardım komutu düzenlendi.\n*Bildir komutunun bugları düzenlendi.!\n*Sunucu iyileştirmeleri ve bot düzenlemesi için Yönetim ekibi anket komutu eklendi.!\n* **oa+kalp** yazarak ekipten size kalp gönderilmesini sağlayabilirsiniz.!\n*ML Komutu Düzeltildi\n*Bildir komutu eklendi,bu komut ile sizlere rahatsızlık veren kullanıcıları Yönetim Ekibimize Rahatlıkla bildirebilirsiniz.!\n*Yeni gelen kullanıcılara özel mesajla karşılama ayarlandı.!')
       
 	  
      
