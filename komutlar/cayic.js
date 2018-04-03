@@ -1,4 +1,4 @@
-const ballAnswers = require('../mlbb.json');
+const ballAnswers = require('../cayic.json');
 var Discord =  require("discord.js");
 exports.run = function(client, message, args){
   const Enes =new  Discord.RichEmbed()
