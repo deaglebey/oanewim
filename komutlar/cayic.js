@@ -18,6 +18,6 @@ exports.conf = {
 
 exports.help = {
   name: 'çayiç',
-  description: 'Çay içmenize yarar.!',
+  description: 'Size çay ısmarlar.',
   usage: 'çayiç'
 };
