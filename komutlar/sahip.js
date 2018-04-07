@@ -25,12 +25,11 @@ exports.run = (client, message, args) => {
     .setAuthor(message.author.username, message.author.avatarURL)
     .addField("Özel mesajlarını kontrol et.!",'Komutları özel mesaj olarak yolladım. :postbox:');
     message.channel.sendEmbed(ozelmesajkontrol) }
-  }   }
+  };  
   
 
  
  
-};
 
 exports.conf = {
   enabled: true,
