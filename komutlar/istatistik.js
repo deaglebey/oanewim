@@ -8,9 +8,9 @@ exports.run = (client, message, params) => {
         
     .setColor('RANDOM')
     
-    .addField("Bot Adı","OA Premium",true)
-    .addField("Total Kullanıcı",client.users.size,true)
-	    .addField("Çalışma Süresi",client.uptime,true)
+    .addField("Bot Adı","OA Premium")
+    .addField("Total Kullanıcı",client.users.size,)
+	    .addField("Çalışma Süresi",client.uptime)
     
     
 	
