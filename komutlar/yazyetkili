@@ -15,3 +15,8 @@ exports.conf = {
   permLevel: 4
 };
 
+exports.help = {
+  name: 'yazyetkili
+  description: 'Yetkili Cmd
+  usage: 'yazyetkili
+};
