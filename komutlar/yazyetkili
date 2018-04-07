@@ -16,7 +16,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yazyetkili
+  name: 'yazyetkili'
   description: 'Yetkili Cmd
   usage: 'yazyetkili
 };
