@@ -17,6 +17,6 @@ exports.conf = {
 
 exports.help = {
   name: 'yazyetkili'
-  description: 'Yetkili Cmd
+  description: 'Yetkili Cmd'
   usage: 'yazyetkili
 };
