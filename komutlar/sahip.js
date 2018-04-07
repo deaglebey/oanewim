@@ -6,6 +6,7 @@ exports.run = (client, message, args) => {
  message.channel.send(":x: Üzgünüm Bu Komut Yapımcım Tek Kullanabilir.!" + message.author)
  }
  
+ else {
  const yardımlistesi=new Discord.RichEmbed()
     .setColor('RANDOM')
     .setAuthor("OA Premium Yetkili Yardım Listesi \n\n\n\n")
@@ -24,13 +25,7 @@ exports.run = (client, message, args) => {
     .setAuthor(message.author.username, message.author.avatarURL)
     .addField("Özel mesajlarını kontrol et.!",'Komutları özel mesaj olarak yolladım. :postbox:');
     message.channel.sendEmbed(ozelmesajkontrol) }
-  } else {
-    let command = params[0];
-    
-  
-
-    
-  }
+  }   }
   
 
  
