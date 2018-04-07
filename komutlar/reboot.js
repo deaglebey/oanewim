@@ -2,9 +2,6 @@ const Discord = require('discord.js');
 const moment = require('moment');
 
 exports.run = (client, message, args) =>
- if(message.author.id !=="327050092957794316"){
- message.channel.send(":x: Üzgünüm Bu Komut Yapımcım Tek Kullanabilir.!" + message.author)
- }
 {
 message.channel.sendMessage('Botun yeniden başlatılmasına onay veriyorsanız 30 saniye içinde evet yazın.')
 .then(() => {
