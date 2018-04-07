@@ -26,7 +26,7 @@ exports.run = function(client, message, args) {
     .addField('Yetkili:', message.author.username)
     .addField('Silinen mesaj sayısı:', messagecount)
     .addField('Sonuç:', `Başarılı`)
-    return message.channel.sendEmbed(sohbetsilindi);
+    return message.channel.sendEmbed(sohbetsilindi).then(message => { setTimeout(function(){ message.delete(0); }, 7000); });
     console.log("Sohbet " + message.member + " tarafından silindi!");
 };
 
