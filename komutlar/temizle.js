@@ -16,7 +16,7 @@ exports.run = function(client, message, args) {
     .addField(':warning: Uyarı :warning:', 'Mesajları silebilmem için `Mesajları Yönet` yetkisine sahip olmalıyım.')
     return message.author.sendEmbed(botunmesajyonet);
   }
-  let messagecount = parseInt(args.join(' '));
+  let messagecount = parseInt(args.join(' 1'));
 	
   message.channel.fetchMessages({
     limit: messagecount
