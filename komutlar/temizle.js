@@ -7,9 +7,7 @@ exports.run = function(client, message, args) {
   .setAuthor(message.author.username, message.author.avatarURL)
   .addField(':warning: Uyarı :warning:', '`temizle` adlı komutu özel mesajlarda kullanamazsın.')
   return message.author.sendEmbed(ozelmesajuyari); }
-	if(messagecount=NaN){
-		message.channel.send("Bir sayı girmelisin değilmi.!")
-	}
+	
   if (!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) {
 	const botunmesajyonet = new Discord.RichEmbed()
     .setColor(0xFF0000)
@@ -19,6 +17,9 @@ exports.run = function(client, message, args) {
     return message.author.sendEmbed(botunmesajyonet);
   }
   let messagecount = parseInt(args.join(' '));
+	if(messagecount=NaN){
+		message.channel.send("Bir sayı girmelisin değilmi.!")
+	}
   message.channel.fetchMessages({
     limit: messagecount
   }).then(messages => message.channel.bulkDelete(messages));
