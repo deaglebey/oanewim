@@ -17,12 +17,18 @@ exports.run = function(client, message, args) {
     return message.author.sendEmbed(botunmesajyonet);
   }
   let messagecount = parseInt(args.join(' '));
-	if(messagecount=NaN){
-		message.channel.send("Bir sayı girmelisin değilmi.!")
-	}
+	
   message.channel.fetchMessages({
     limit: messagecount
   }).then(messages => message.channel.bulkDelete(messages));
+	
+	if(messagecount=NaN){
+		message.channel.send("Yanlış kullanım. `oa+temizle silinecek miktar`")
+	}
+	
+	if(messagecount<1){
+		message.channel.send("Bir sayı girmelisin değilmi.!")
+	}
     const sohbetsilindi = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
