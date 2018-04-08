@@ -26,7 +26,7 @@ exports.run = (client, message, params) => {
 
       .setURL("https://cdn.discordapp.com/avatars/384342647826808832/b453dbf1833b28342ce837a0024f458c.jpg?size=1024")
      
-      .setFooter("OA Premium OA ON AIR Sunucusu İçin Özel Kodlanmıştır.!|Developer:Penia|", "https://cdn.discordapp.com/avatars/384342647826808832/b453dbf1833b28342ce837a0024f458c.jpg?size=1024")
+      .setFooter("OA Premium©-2018", "https://cdn.discordapp.com/avatars/384342647826808832/b453dbf1833b28342ce837a0024f458c.jpg?size=1024")
 
         
        
