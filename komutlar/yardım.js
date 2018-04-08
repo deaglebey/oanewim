@@ -14,8 +14,8 @@ exports.run = (client, message, params) => {
   
   
 
-  .addField("Kullanıcı Komutları","**bildir**:Rahatsız olduğunuz kişiyi adminlere bildirmenize yarar.\n**botbilgi**:Bot hakkında bilgi alırsınız.!\n**davet**:Sunucumuza arkadaşlarınızı davet etmeniz için bot size bir link verir.\n**profil**:Sunucu içerisindeki durumunuzu gösterir.!\n**sunucubilgi**:Sunucu hakkında bilgi verir.\n**yenilikler**:Bota gelen yenilik ve güncellemeleri gösterir.\n**öner**:Bota eklenmesini istediğiniz tavsiye ve önerilerinizi yöneticilere iletir.\n**ping**:Botun anlık pingini gösterir.\n**yardım**:Botun komutlarını gösterir.")
-  .addField("Admin ve Mod Komutları","**anket**:Sunucu içerisinde anket yapar.\n**ban**:Belirlenen kişi sunucudan yasaklar.!\n**temizle**:Bu komut şuan devredışıdır.")
+  .addField("Kullanıcı Komutları","**bildir**:Rahatsız olduğunuz kişiyi adminlere bildirmenize yarar.\n**botbilgi**:Bot hakkında bilgi alırsınız.!\n**davet**:Sunucumuza arkadaşlarınızı davet etmeniz için bot size bir link verir.\n**istatistik**:Bot istatistiklerini gösterir.!\n**profil**:Sunucu içerisindeki durumunuzu gösterir.!\n**sunucubilgi**:Sunucu hakkında bilgi verir.\n**yenilikler**:Bota gelen yenilik ve güncellemeleri gösterir.\n**öner**:Bota eklenmesini istediğiniz tavsiye ve önerilerinizi yöneticilere iletir.\n**ping**:Botun anlık pingini gösterir.\n**yardım**:Botun komutlarını gösterir.")
+  .addField("Admin ve Mod Komutları","**anket**:Sunucu içerisinde anket yapar.\n**ban**:Belirlenen kişi sunucudan yasaklar.!\n**temizle**:Belirtilen miktarda mesaj siler.")
     message.author.send(yardımlistesi);
     //message.author.sendCode('asciidoc', `= Komut Listesi =\n\n[Komut hakkında bilgi için ${ayarlar.prefix}yardım <komut adı>]\n\n${client.commands.map(c => `${ayarlar.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`);
   if (message.channel.type !== 'dm') {
