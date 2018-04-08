@@ -7,6 +7,9 @@ exports.run = function(client, message, args) {
   .setAuthor(message.author.username, message.author.avatarURL)
   .addField(':warning: Uyarı :warning:', '`temizle` adlı komutu özel mesajlarda kullanamazsın.')
   return message.author.sendEmbed(ozelmesajuyari); }
+	if(messagecount=NaN){
+		message.channel.send("Bir sayı girmelisin değilmi.!")
+	}
   if (!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) {
 	const botunmesajyonet = new Discord.RichEmbed()
     .setColor(0xFF0000)
