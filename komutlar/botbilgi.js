@@ -14,14 +14,14 @@ exports.run = (client, message, params) => {
       
       .setAuthor("OA Premium | Bot Bilgi", "https://cdn.discordapp.com/avatars/384342647826808832/b453dbf1833b28342ce837a0024f458c.jpg?size=1024")
       .setColor("#15f153")
-      .addField("Bot Adı",client.user.username)
-      .addField("Bot Geliştirici",'Penia')
-      .addField("Bot Prefix",'oa+')
-	  .addField("Ping",client.ping +'**ms**')
+      .addField("Bot Adı",client.user.username,true)
+      .addField("Bot Geliştirici",'Penia',true)
+      .addField("Bot Prefix",'oa+',true)
+	  .addField("Ping",client.ping +'**ms**',true)
       //.addField("Destek Sunucusu", "https://discord.gg/JtUqjEz")
       //.addField("Davet Linki","http://bit.ly/turkuaz-bot")
-      .addField("Kullanılan Kitaplık Türü",'Discord.js')
-      .addField("Oluşturulma Tarihi",client.user.createdAt)
+      .addField("Kullanılan Kitaplık Türü",'Discord.js',true)
+      .addField("Oluşturulma Tarihi",client.user.createdAt,true)
       
 
       .setURL("https://cdn.discordapp.com/avatars/384342647826808832/b453dbf1833b28342ce837a0024f458c.jpg?size=1024")
