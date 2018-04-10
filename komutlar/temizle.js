@@ -2,8 +2,7 @@ exports.run = function(client, message, args) {
   
   
   let messagecount = parseInt(args.join(' ')) + 1;
-  if{(messagecount=NaN) message.channel.send("Lütfen sayı giriniz...!")
-    }
+ 
   
   message.channel.fetchMessages({
     limit: messagecount
