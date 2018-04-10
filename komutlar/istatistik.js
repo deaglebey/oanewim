@@ -10,6 +10,7 @@ exports.run = (client, message, params) => {
     .setAuthor("OA Premium İstatistikler")
     .addField("Bot Adı",client.user.username,true)
     .addField("Bellek Kullanımı",(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)+" MB **Kullanılıyor...**")
+  .addField("Çalışma Süresi",client.readyTimestamp,true);
    .addField("Total Kullanıcı",client.users.size,true)
    .addField("Ping",client.ping+"Ms",true)
     .addField("Yapımcı","Penia",true)
