@@ -3,7 +3,7 @@ exports.run = function(client, message, args) {
   message.channel.fetchMessages({
     limit: messagecount
   }).then(messages => message.channel.bulkDelete(messages));
-  message.channel.send(":white_check_mark: Belirlenen miktarda mesaj sildim...")
+  message.reply(":white_check_mark: Belirlenen miktarda mesaj sildim...").then(message => { setTimeout(function(){ message.delete(0); }, 7000); })
 };
 
 exports.conf = {
