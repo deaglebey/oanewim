@@ -3,6 +3,7 @@ exports.run = function(client, message, args) {
   message.channel.fetchMessages({
     limit: messagecount
   }).then(messages => message.channel.bulkDelete(messages));
+  message.channel.send(":white_check_mark: Belirlenen miktarda mesaj sildim...")
 };
 
 exports.conf = {
@@ -13,7 +14,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'purge',
-  description: 'Purges X amount of messages from a given channel.',
-  usage: 'purge <number>'
+  name: 'temizle',
+  description: 'Belirlenen miktarda mesaj siler.',
+  usage: 'temizle <miktar>'
 };
