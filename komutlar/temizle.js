@@ -4,7 +4,8 @@ exports.run = function(client, message, args) {
  
    if(isNaN(args[0])){
         
-        message.reply(":no_entry: **Geçersiz sayı girdiniz,Tekrar deneyin.**" )
+        message.reply(":no_entry: **Geçersiz sayı girdiniz,Tekrar deneyin.**" ).then(message => { setTimeout(function(){ message.delete(0); }, 3000); })
+        
     }
     
     else
