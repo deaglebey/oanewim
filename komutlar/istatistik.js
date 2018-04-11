@@ -9,7 +9,7 @@ exports.run = (client, message, params) => {
     .setThumbnail("https://cdn.discordapp.com/avatars/384342647826808832/b453dbf1833b28342ce837a0024f458c.jpg?size=1024")
     .setAuthor("OA Premium İstatistikler")
     .addField("Bot Adı",client.user.username,true)
-  .addField("Çalışma Süresi",client.uptime,true)
+  //.addField("Çalışma Süresi",client.uptime,true)
     .addField("Bellek Kullanımı",(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)+" MB **Kullanılıyor...**")
   //.addField("Çalışma Süresi",client.readyTimestamp,true);
    .addField("Total Kullanıcı",client.users.size,true)
