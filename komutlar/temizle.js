@@ -1,4 +1,3 @@
-
 const Discord = require('discord.js');
 exports.run = function(client, message, args) {
    let messagecount = parseInt(args.join(' ')) + 1;
@@ -18,6 +17,9 @@ exports.run = function(client, message, args) {
         }
 };
 
+
+
+
 exports.conf = {
   enabled: true,
   guildOnly: true,
@@ -29,5 +31,4 @@ exports.help = {
   name: 'temizle',
   description: 'Belirlenen miktar mesajı siler.',
   usage: 'temizle <temizlenecek mesaj sayısı>'
-
-
+};
