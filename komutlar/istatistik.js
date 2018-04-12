@@ -30,7 +30,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'istatistik',
+  name: 'istatistik' || 'i',
   description: 'Bot`un istatistik bilgierini verir.',
   usage: 'istatistik'
 };
