@@ -13,7 +13,7 @@ exports.run = function(client, message, args) {
   message.channel.fetchMessages({
     limit: messagecount
   }).then(messages => message.channel.bulkDelete(messages));
-  message.reply(":white_check_mark:" + `args` + " adet mesaj sildim.").then(message => { setTimeout(function(){ message.delete(0); }, 3000); })
+  message.reply(":white_check_mark:" + args + " adet mesaj sildim.").then(message => { setTimeout(function(){ message.delete(0); }, 3000); })
         }
 };
 
