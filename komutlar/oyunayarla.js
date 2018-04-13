@@ -11,10 +11,7 @@ exports.run = function(client, message, args) {
     else
         {
             client.user.setGame(argresult);
-            message.channel.send(":white_check_mark: Oyun ayarlandı...").then(message => { setTimeout(function(){ message.delete(0); }, 7000); });
-    
-    
- };
+            message.channel.send(":white_check_mark: Oyun ayarlandı...");then(message => { setTimeout(function(){ message.delete(0); }, 7000); });
         }
     
 };
