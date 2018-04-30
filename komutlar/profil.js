@@ -1,34 +1,55 @@
 const Discord = require('discord.js');
+const moment = require('moment');
 const client = new Discord.Client();
 
-exports.run = (client, message, params) => {
+exports.run = (client, message, params,dateformat) => {
 
-    const profilbilgi = new Discord.RichEmbed()
-		
-        
-    .setColor('#5F9EA0')
-    .setThumbnail(message.author.avatarURL)
-    .setAuthor("Kullanıcı Bilgileriniz")
-    
-	
-    .addField("Kullanıcı Adı:",message.author.username)
-	.addField("OA`ya Giriş Tarihiniz:",message.member.joinedAt)
-	.addField("Discord Kimliğiniz:",message.member.id)
-	.addField("Sahip Olunan Rol:",message.member.hoistRole ? message.member.hoistRole :'\Şuan Sunucudan Dolayı Bu Bilgiyi Görmeye Hakkım Yok')
-	.addField('Şu an oynadığı oyun:', message.author.presence.game ? message.author.presence.game.name : 'Şu an oyun oynamıyor')
-	.addField('Bot bir kullanıcımı ?:', message.author.bot ? '\n Evet' : 'Hayır')
-	
-   
-    
-        
-  
-  
-          
-         
-        return message.channel.sendEmbed(profilbilgi);
+    var user;
+    let member = message.mentions.users.first();
+        let author = message.author;
+        if(member) {
+             user = member;
+        } else {
+             user = author;
+        }
+    member = message.guild.member(user);
+    let roles = member.roles.array().slice(1).sort((a, b) => a.comparePositionTo(b)).reverse().map(role => role.name);
+       if (roles.length < 1) roles = ['Bu Kullanıcının Rolü Yok!'];
+    const millisCreated = new Date().getTime() - user.createdAt.getTime();
+    const daysCreated = moment.duration(millisCreated).format("Y [yıl], D [gün], H [saat], m [dakika], s [saniye]")
+    const millisJoined = new Date().getTime() - member.joinedAt.getTime();
+    const userJoined = moment.duration(millisJoined).format("Y [yıl], D [gün], H [saat], m [dakika], s [saniye]")
+    if(user.presence.status === "dnd"){
+      var durum = "Rahatsız Etmeyin"
+    }
+    else if(user.presence.status === "online"){
+      var durum = "Çevrimiçi"
+    }
+    else if(user.presence.status === "idle"){
+      var durum = "Boşta"
+    }
+      else {
+      var durum = "Görünmez"
+    }
+     const embed5 = new Discord.RichEmbed()
+         .setColor(Math.floor(Math.random() * (0xFFFFFF + 1)))
+         .setTimestamp()
+         .setThumbnail(`${user.displayAvatarURL}`)
+         .addField("Kullanıcı", `${user}`, true)
+         .addField("Şu anda oynadığı oyun", user.presence.game ? user.presence.game.name : 'Oynadığı bir oyun yok', true)
+         .addField("Durum", `${durum}` , true)
+         .addField('Katılım tarihi (Sunucu)', `${userJoined}`, true)
+         .addField('Katılım Tarihi (Discord)', `${daysCreated}`, true)
+         //.addField("Hesabın Kuruluş Tarihi", `${dateformat(user.createdAt)}`)
+         .addField('Bu sunucudaki rolleri', `${roles.join(', ')}`, true)
+         .setFooter(`OA Premium`);
+         message.channel.send({embed: embed5})
 
-  
-  }
+
+
+
+
+  };
 
 exports.conf = {
   enabled: true,
