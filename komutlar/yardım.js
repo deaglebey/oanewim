@@ -11,10 +11,10 @@ exports.run = (client, message, params) => {
     .setColor('RANDOM')
     .setAuthor("OA Premium Tüm Komutlar Yardım Listesi \n\n\n\n")
     .addField("Eğlence Komutları","**çayiç**:Size çay ısmarlar.!\n**yaz**:Bota istediğiniz herhangi şeyi yazdırır.!\n**yazı-tura**:Yazı-tura atarsınız.!\n**özlü**:Bot size rastgele özlü sözler söyler.\n**ml**:Bot rastgele MLBB Resmi gönderir.\n**kalp**:OA ekibinden size kalp gönderir.")
-  
-  
 
-  .addField("Kullanıcı Komutları","**avatar**:Avatarınızı görüntüler.\n**bildir**:Rahatsız olduğunuz kişiyi adminlere bildirmenize yarar.\n**botbilgi**:Bot hakkında bilgi alırsınız.!\n**davet**:Sunucumuza arkadaşlarınızı davet etmeniz için bot size bir link verir.\n**ekip**:Yönetim ekibi listesini gösterir.\n**istatistik**:Bot istatistiklerini gösterir.!\n**profil**:Sunucu içerisindeki durumunuzu gösterir.!\n**sunucubilgi**:Sunucu hakkında bilgi verir.\n**yenilikler**:Bota gelen yenilik ve güncellemeleri gösterir.\n**öner**:Bota eklenmesini istediğiniz tavsiye ve önerilerinizi yöneticilere iletir.\n**ping**:Botun anlık pingini gösterir.\n**yardım**:Botun komutlarını gösterir.")
+
+
+  .addField("Kullanıcı Komutları","**avatar**:Avatarınızı görüntüler.\n**bildir**:Rahatsız olduğunuz kişiyi adminlere bildirmenize yarar.\n**botbilgi**:Bot hakkında bilgi alırsınız.!\n**davet**:Sunucumuza arkadaşlarınızı davet etmeniz için bot size bir link verir.\n**ekip**:Yönetim ekibi listesini gösterir.\n**havadurumu**:Girilen şehir`in hava durumunu gösterir.\n**istatistik**:Bot istatistiklerini gösterir.\n**profil**:Etiketlenen kişinin yada sizin bilgilerinizi gösterir.\n**sunucubilgi**:Sunucu hakkında bilgi verir.\n**yenilikler**:Bota gelen yenilik ve güncellemeleri gösterir.\n**öner**:Bota eklenmesini istediğiniz tavsiye ve önerilerinizi yöneticilere iletir.\n**ping**:Botun anlık pingini gösterir.\n**yardım**:Botun komutlarını gösterir.")
   .addField("Admin ve Mod Komutları","**anket**:Sunucu içerisinde anket yapar.\n**ban**:Belirlenen kişi sunucudan yasaklar.!\n**temizle**:Belirtilen miktarda mesaj siler.")
     message.author.send(yardımlistesi);
     //message.author.sendCode('asciidoc', `= Komut Listesi =\n\n[Komut hakkında bilgi için ${ayarlar.prefix}yardım <komut adı>]\n\n${client.commands.map(c => `${ayarlar.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`);
@@ -27,10 +27,10 @@ exports.run = (client, message, params) => {
     message.channel.sendEmbed(ozelmesajkontrol) }
   } else {
     let command = params[0];
-    
-  
 
-    
+
+
+
   }
 };
 
