@@ -1,0 +1,41 @@
+const Discord = require('discord.js');
+const moment = require('moment');
+
+exports.run = (client, message, args) =>
+{
+const giris=new Discord.RichEmbed()
+.setColor("RANDOM")
+.setTitle("Komut Girişi.!")
+.addField("Eğer botun yeniden başlamasını istiyorsanız 30 Saniye içinde evet yazınız.","30 saniye sonra iptal edilecektir.")
+.setFooter("Komut girişi OA Premium")
+message.channel.send(giris)
+.then(() => {
+  message.channel.awaitMessages(response => response.content === "evet", {
+    max: 1,
+    time: 30000,
+    errors: ['time'],
+  })
+  .then((collected) => {
+      message.channel.sendMessage("```Penia Bot Sistemleri Yeniden Başlatılıyor...```").then(message => {
+      console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] Bot yeniden başlatılıyor...`)
+      process.exit(1);
+    }).catch(console.error)
+    })
+    .catch(() => {
+      message.channel.sendMessage('Yeniden başlatma işlemi iptal edildi.');
+    });
+});
+};
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: 4
+};
+
+exports.help = {
+  name: 'reboot',
+  description: 'Botu yeniden başlatır.',
+  usage: 'reboot'
+};
